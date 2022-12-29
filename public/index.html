@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/swiper.css">
     <title>Document</title>
 </head>
 
@@ -14,8 +17,7 @@
     <!-- <h1 class="text-5xl font-bold"> Bob Shoes </h1> -->
 
     <!-- Start nabar -->
-    <nav
-        class="bg-white px-2 sm:px-4 py-2.5  fixed w-full z-20 top-0 left-0">
+    <nav class="bg-white px-2 sm:px-4 py-2.5  fixed w-full z-20 top-0 left-0">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="https://flowbite.com/" class="flex items-center">
                 <img src="assets/logo.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo">
@@ -23,10 +25,12 @@
             <div class="flex md:order-2 w-100">
                 <label class="relative block">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                      <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
+                        <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
                     </span>
-                    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm w-fu" placeholder="Cari produk dengan nama, kebutuhan" type="text" name="search"/>
-                  </label>
+                    <input
+                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm w-fu"
+                        placeholder="Cari produk dengan nama, kebutuhan" type="text" name="search" />
+                </label>
                 <button data-collapse-toggle="navbar-sticky" type="button"
                     class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-sticky" aria-expanded="false">
@@ -40,24 +44,23 @@
                 </button>
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul
-                    class="flex flex-col p-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                <ul class="flex flex-col p-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                     <li>
                         <a href="#"
-                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            class="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-dark-custome md:hover:font-bold md:p-0"
                             aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                            class="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-dark-custome md:hover:font-bold md:p-0">About</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                            class="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-dark-custome md:hover:font-bold md:p-0">Services</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                            class="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-dark-custome md:hover:font-bold md:p-0">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -67,24 +70,445 @@
 
 
     <!-- start hero -->
-    <section class="bg-slate-50">
-        <div class="grid max-w-screen-xl px-4 lg:py-56 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
+    <section class="bg-grey-card ">
+        <div class="container grid  lg:py-48 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 font-bold tracking-tight leading-none md:text-5xl xl:text-6xl">Rasakan kualitas dan kenyamanan sepatu  kami.</h1>
-                <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">Kami menggunakan bahan-bahan berkualitas tinggi dan teknologi terkini dalam proses pembuatan sepatu kami, sehingga anda dapat merasakan kenyamanan yang maksimal saat menggunakannya.</p>
-                <a href="#" class="inline-flex dark:bg-gray-900 items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-md bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                <h1
+                    class="max-w-2xl mb-4 md:text-dark-custome font-medium tracking-tight leading-none md:text-5xl xl:text-6x">
+                    Rasakan
+                    kualitas dan kenyamanan sepatu <br>kami.</h1>
+                <p class="max-w-2xl mb-6 lg:mb-8 md:text-lg lg:text-xl mt-5 md:text-dark-custome font-normal">
+                    Kami
+                    menggunakan bahan-bahan
+                    berkualitas tinggi dan teknologi terkini dalam proses pembuatan sepatu kami, <br> sehingga anda
+                    dapat
+                    merasakan kenyamanan yang <br> maksimal saat menggunakannya.</p>
+                <a href="#"
+                    class="inline-flex dark:bg-gray-900 items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-md bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                     Lihat Produk
                 </a>
-                <a href="#" class="inline-flex  items-center justify-center px-5 py-3 font-medium text-center text-black bg-white rounded-lg hover:bg-gray-100 focus:ring-4">
+                <a href="#"
+                    class="inline-flex  items-center justify-center px-5 py-3 font-medium text-center bg-primary-700 md:text-dark-custome">
                     Hubungi bagian Penjualan
-                </a> 
+                </a>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
                 <img src="assets/sepatu.png" alt="mockup">
-            </div>                
+            </div>
         </div>
     </section>
     <!-- end hero -->
+
+
+
+
+
+    <!-- Start list Produck -->
+    <div class="container xl:mt-10 xl:mb-7 mx-auto flex justify-between">
+        <div class="lg:text-2xl flex items-center font-medium">Produk. <span
+                class="lg:text-sm mt-3 mx-3 text-gray-400 font-normal">Sepatu
+                dengan kualitas dan kenyamanan terbaik</span> </div>
+        <div>Lihat semua</div>
+    </div>
+   
+
+
+    <section class="ml-20"  >
+        <div class="swiper">
+            <div class=" xl:mt-2 xl:mb-7 mx-auto flex justify-between"  >
+                <div class="lg:text-sm mt-3  text-gray-400 ">Pilih sesuai dengan kebutuhan dan selera <br> anda</div>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide grid grid-cols-3 gap-5">
+                    <div class="card"  >
+                     <div class="card-body bg-grey-card px-3 py-20 flex justify-center" style="height: 424px;">
+                         <img src="assets/produk-1.png" alt=""  />
+                     </div>
+                     <div class="card-footer mt-2">
+                         <div class="flex flex-col">
+                             <div class="text-base font-normal" >Sepatu 1</div>
+                             <div  >Rp 100.000</div>
+                         </div>
+                     </div>
+                    </div>
+                    <div class="card"  >
+                     <div class="card-body bg-grey-card px-3 py-20 flex justify-center" style="height: 424px;" >
+                         <img src="assets/produk-2.png" alt=""   />
+                     </div>
+                     <div class="card-footer mt-2">
+                         <div class="flex flex-col">
+                             <div class="text-base font-normal" >Sepatu 1</div>
+                             <div  >Rp 100.000</div>
+                         </div>
+                     </div>
+                    </div>
+                    <div class="card">
+                     <div class="card-body bg-grey-card px-3 py-20 flex justify-center" style="height: 424px;">
+                         <img src="assets/produk-3.png" alt=""  />
+                     </div>
+                     <div class="card-footer mt-2">
+                         <div class="flex flex-col">
+                             <div class="text-base font-normal" >Sepatu 1</div>
+                             <div  >Rp 100.000</div>
+                         </div>
+                     </div>
+                    </div>
+                 </div>
+
+
+                
+
+
+                
+            </div>
+
+            <div class="swiper-button-prev prevs"></div>
+            <div class="swiper-button-next next"></div>
+
+        </div>
+        
+
+
+    </section>
+
+
+    <section class="container bg-grey-card xl:mt-10 xl:mb-7 mx-auto flex justify-between p-12">
+        <div class="grid grid-cols-2 gap-5">
+            <div>
+                <div class="lg:text-2xl  font-medium  ">
+                    Kustom Sepatu anda
+                </div>
+
+                <div class="lg:mt-80">
+                    <div class="text-base text-start mb-8 ">
+                        Tampilkan keunikanmu dengan dengan <br> sepatu kami.
+                    </div>
+                    <button
+                        class="bg-transparent hover:bg-gray-100 text-gray-800 font-semibold rounded-xl py-4 px-4 border border-gray-400 rounded shadow w-full">
+                        Hubungi bagain penjualan
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="">
+                <img src="assets/sepatubg.png" alt="" srcset="">
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <section class="container mx-auto xl:mt-10 xl:mb-7">
+        <div class="container xl:mt-10 xl:mb-7 mx-auto flex justify-between">
+            <div class="lg:text-2xl flex items-center font-medium ">
+                <div>
+                    Layanan.
+                </div>
+                <div class="lg:text-sm mx-3 font-normal text-gray-400">Temukan pakar pembuatan sepatu khusus <br> Anda
+                </div>
+            </div>
+            <div>Lihat semua</div>
+        </div>
+        <div class="grid grid-cols-3 gap-5">
+
+            <div class="p-6 bg-grey-card rounded-lg h-full">
+                <img src="assets/ic_next.svg" alt="next" class="my-5">
+                <a href="#">
+                    <h5 class="font-sans font-normal text-dark-custome text-2xl mb-8">Kustom Sepatu</h5>
+                </a>
+                <p class="font-normal text-gray-500 dark:text-gray-400 font-roboto mb-12 ">Layanan pembuatan sepatu <br>
+                    sesuai dengan
+                    keinginan dan <br> ukuran kaki pelanggan.</p>
+                <a href="#"
+                    class="inline-flex items-center text-custume-dark-light font-normal text-base underline mb-12">
+                    Selengkapnya
+                </a>
+            </div>
+
+
+            <div class="p-6 bg-grey-card rounded-lg h-full">
+                <img src="assets/ic_next.svg" alt="next" class="my-5">
+                <a href="#">
+                    <h5 class="font-sans font-normal text-dark-custome text-2xl mb-8">Pembuatan Sepatu Kulit</h5>
+                </a>
+                <p class="font-normal text-gray-500 dark:text-gray-400 font-roboto mb-12 ">Menyediakan pembuatan sepatu
+                    dari bahan kulit, <br> baik sepatu casual maupun sepatu <br> formal.</p>
+                <a href="#"
+                    class="inline-flex items-center text-custume-dark-light font-normal text-base underline mb-12">
+                    Selengkapnya
+                </a>
+            </div>
+
+
+            <div class="p-6 bg-grey-card rounded-lg h-full">
+                <img src="assets/ic_next.svg" alt="next" class="my-5">
+                <a href="#">
+                    <h5 class="font-sans font-normal text-dark-custome text-2xl mb-8">Sepatu untuk kebutuhan Khusus</h5>
+                </a>
+                <p class="font-normal text-gray-500 dark:text-gray-400 font-roboto mb-12 ">Menyediakan pembuatan sepatu
+                    untuk <br> keperluan khusus, seperti sepatu <br> safety dll.</p>
+                <a href="#"
+                    class="inline-flex items-center text-custume-dark-light font-normal text-base underline mb-12">
+                    Selengkapnya
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <!-- start testimoni -->
+
+
+
+    <!-- Slider main container -->
+
+    <section class=" ml-20">
+        <div class="swiper">
+            <div class=" xl:mt-10 xl:mb-7 mx-auto flex justify-between">
+                <div class="lg:text-2xl flex items-center font-medium ">
+                    <div>
+                        Testimoni.
+                    </div>
+                    <div class="lg:text-sm mx-3 font-normal text-gray-400">Sepatu
+                        dengan kualitas dan kenyamanan terbaik
+                    </div>
+                </div>
+                <!-- <div>Lihat semua</div> -->
+            </div>
+            <div class="swiper-wrapper ">
+
+                <div class="swiper-slide grid grid-cols-3 gap-5">
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome font-sans mb-12 text-xl ">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col justify-start items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome font-sans mb-12 text-xl">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col justify-start items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome font-sans mb-12 text-xl">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide grid grid-cols-3 gap-5">
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome  font-sans mb-12 text-xl">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col justify-start items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome font-sans mb-12 text-xl">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col justify-start items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome font-sans mb-12 text-xl">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="swiper-slide grid grid-cols-3 gap-5">
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome  font-sans mb-12 text-xl">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col justify-start items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome font-sans mb-12 text-xl ">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col justify-start items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-grey-card rounded-lg h-full">
+                        <p class="font-normal text-dark-custome font-sans mb-12 text-xl ">“Saya sangat puas dengan
+                            sepatu yang saya beli di toko ini. Desainnya sangat stylish dan nyaman dipakai sepanjang
+                            hari.”
+                        </p>
+                        <div class="flex items-center justify-start">
+                            <img src="assets/user.png" alt="" width="50" height="50">
+                            <div class="flex flex-col items-start mx-3 mt-8">
+                                <div class="name text-base font-medium">
+                                    Miquel Regidor
+                                </div>
+                                <div class="job-user text-base font-normal mb-8">
+                                    Outbound Manager
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <!-- end testimoni -->
+
+
+    <footer class="bg-[#333333] mb-0 mt-20">
+        <div class="container mx-auto py-10">
+            <div class="text-xl text-white underline font-normal mb-8 ">Bobs’shoes</div>
+            <ul>
+                <li class="mb-5 text-white">FAQ</li>
+                <li class="mb-5 text-white">Tentang Kami</li>
+                <li class="mb-5 text-white">Kontak</li>
+                <li class="mb-5 text-white">Produk</li>
+                <li class="text-white">Layanan</li>
+            </ul>
+
+            <div class="flex justify-start pt-12 pb-10">
+                <img src="assets/instagram.svg" alt="" />
+                <img src="assets/facebook.svg" alt="" class="mx-12" />
+                <img src="assets/whatsapp.svg" alt="" />
+            </div>
+
+            <hr class=" border-1 border-white pb-12" />
+
+
+            <div class="text-white">©Bobs’shoes 2022.</div>
+
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerColumnFill: 'row',
+            slidesPerView: 1.1,
+            spaceBetween: 20,
+            slidesPerColumn: 3,
+            loop: true,
+            autoplay: {
+                delay: 7000,
+                disableOnInteraction: false,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
 
 </body>
 

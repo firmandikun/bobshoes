@@ -1,0 +1,35 @@
+.swiper {
+    width: 100%;
+    /* height: 300px; */
+  }
+  
+
+  .swiper-button-next::after {
+    content:  url('../assets/ic_next_xs.svg');
+  }
+
+.swiper-button-prev::after {
+    content:  url('../assets/ic_back.svg');
+}
+
+
+.swiper-button-next{
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  }
+  .swiper-button-prev{
+    left:1210px;
+    top: 60px;
+
+  }
+.swiper-button-next.next{
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  }
+  .swiper-button-prev.prevs{
+    right: 0;
+    top: 30px;
+
+  }
